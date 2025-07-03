@@ -1,10 +1,18 @@
+import { useNavigate } from "react-router";
 import { assets } from "../assets/assets";
 
 function CarCard({ car }) {
   const currency = import.meta.env.VITE_CURRENCY;
+  const navigate = useNavigate();
 
   return (
-    <div className="group rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-all duration-500 cursor-pointer">
+    <div
+      onClick={() => {
+        navigate(`/car-details/${car._id}`);
+        scrollTo(0, 0);
+      }}
+      className="group rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-all duration-500 cursor-pointer"
+    >
       <div className="relative h-48 overflow-hidden">
         <img
           src={car.image}
@@ -34,7 +42,7 @@ function CarCard({ car }) {
               {car.brand} {car.model}
             </h3>
             <p className="text-muted-foreground text-sm">
-              {car.category} ⚫ {car.year}
+              {car.category} ◾ {car.year}
             </p>
           </div>
         </div>
