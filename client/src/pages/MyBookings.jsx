@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { assets } from "../assets/assets";
-import Title from "../components/TItle";
+import Title from "../components/Title";
 import { useAppContext } from "../context/AppContext";
 import toast from "react-hot-toast";
 import { motion } from "motion/react";
