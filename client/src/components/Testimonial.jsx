@@ -1,5 +1,5 @@
 import { assets } from "../assets/assets";
-import Title from "./TItle";
+import Title from "./Title";
 import { motion } from "motion/react";
 
 function Testimonial() {
